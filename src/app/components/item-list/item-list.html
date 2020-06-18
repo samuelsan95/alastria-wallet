@@ -2,7 +2,7 @@
 <ion-list>
   <ion-item class="ion-text-wrap" no-lines tappable *ngFor="let item of items; let i = index" 
       (click)="selectItem(item)">
-      <ion-label>
+      <!-- <ion-label> -->
         <ion-row>
           <ion-col id="img-col" size=3>
             <img [src]="item.imgUrl" [alt]="item.title">
@@ -25,6 +25,6 @@
             </ion-row>
           </ion-col>
         </ion-row>
-      </ion-label>
+      <!-- </ion-label> -->
   </ion-item>
 </ion-list>
