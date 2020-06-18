@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "start:android": "ionic cordova run android",
     "start:android:device": "ionic cordova run android --device--debug",
-    "start:browser": "ionic cordova run browser --livereload-url"
+    "start:browser": "ionic cordova run browser --livereload-url",
+    "start:ios": "ionic cordova prepare ios"
   },
   "private": true,
   "dependencies": {

@@ -134,11 +134,12 @@ export class ConfirmAccessPage {
                     const uri = AppConfig.procUrl;
                     const privKey = await this.securedStrg.get('userPrivateKey');
                     const did = await this.securedStrg.get('userDID');
-                    const jti = `Alastria/presentation/${Math.random().toString().substring(5)}`
+                    const jti: any = `Alastria/presentation/${Math.random().toString().substring(5)}`;
                     const signedCredentialJwts = this.getSignedCredentials(securedCredentials);
                     const presentation = tokensFactory.tokens.createPresentation(`${did}#keys-1`, did, this.verifiedJWTDecode.payload.iss,
                         this.verifiedJWTDecode.payload.pr['@context'], signedCredentialJwts, AppConfig.procUrl,
-                        `0x${this.verifiedJWTDecode.payload.pr.procHash}`, this.verifiedJWTDecode.payload.exp, this.verifiedJWTDecode.payload.nbf, jti);
+                        `0x${this.verifiedJWTDecode.payload.pr.procHash}`, this.verifiedJWTDecode.payload.exp,
+                        this.verifiedJWTDecode.payload.nbf, jti);
 
                     const signedPresentation = tokensFactory.tokens.signJWT(presentation, privKey.substring(2));
                     const presentationPSMHash = tokensFactory.tokens.PSMHash(web3, signedPresentation, did);
@@ -261,7 +262,7 @@ export class ConfirmAccessPage {
 
     private async notExistKey(web3: any, currentCredentialKey: string, index: number, finalCredential: any): Promise<any> {
         return this.transactionSrv.addSubjectCredential(web3, this.credentialJWT[index],
-                                                        this.verifiedJWTDecode[index][AppConfig.PAYLOAD][AppConfig.SUBJECT], 'www.google.com')
+                    this.verifiedJWTDecode[index][AppConfig.PAYLOAD][AppConfig.SUBJECT], 'www.google.com')
             .then(result => {
                 finalCredential[AppConfig.PSM_HASH] = result;
                 return this.securedStrg.setJSON(currentCredentialKey, finalCredential);

@@ -52,7 +52,7 @@ export class TokenService {
         return decodedToken;
     }
 
-    public verifyTokenES(token: string, pku: string): string | object {
+    public verifyTokenES(token: string, pku: string): any {
         let decodedToken = tokensFactory.tokens.verifyJWT(token, pku);
         return decodedToken;
     }

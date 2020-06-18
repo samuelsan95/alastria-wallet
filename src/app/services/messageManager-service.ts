@@ -115,7 +115,7 @@ export class MessageManagerService {
         return await alert.present();
     }
 
-    private async createAndSendAlastriaSession(alastriaToken: string): Promise<any> {
+    private async createAndSendAlastriaSession(alastriaToken: any): Promise<any> {
         const decodedToken = this.tokenSrv.decodeTokenES(alastriaToken);
         const issuerDID = decodedToken[AppConfig.PAYLOAD][AppConfig.ISSUER];
         const callbackUrl = decodedToken[AppConfig.PAYLOAD][AppConfig.CBU];
@@ -138,8 +138,9 @@ export class MessageManagerService {
                 const privKey = identity[AppConfig.USER_PRIV_KEY];
                 const pku = identity[AppConfig.USER_PKU];
                 const subjectDID = identity[AppConfig.USER_DID];
+                const context: any = '@jwt';
                 const alastriaSession =
-                    tokensFactory.tokens.createAlastriaSession('@jwt', subjectDID, `0x${pku}`, alastriaToken, expDate, currentDate, jti);
+                    tokensFactory.tokens.createAlastriaSession(context, subjectDID, `0x${pku}`, alastriaToken, expDate, currentDate, jti);
                 const signedAlastriaSession = tokensFactory.tokens.signJWT(alastriaSession, privKey.substring(2));
                 const httpOptions = {
                     headers: new HttpHeaders({
@@ -158,7 +159,7 @@ export class MessageManagerService {
         }
     }
 
-    private async createAndSendAlastriaAIC(alastriaToken: string) {
+    private async createAndSendAlastriaAIC(alastriaToken: any) {
         const decodedToken = this.tokenSrv.decodeTokenES(alastriaToken);
         const issuerDID = decodedToken[AppConfig.PAYLOAD][AppConfig.ISSUER];
         const callbackUrl = decodedToken[AppConfig.PAYLOAD][AppConfig.CBU];
@@ -175,7 +176,7 @@ export class MessageManagerService {
                 const account = web3.eth.accounts.create();
                 const address = account[AppConfig.ADDRESS];
                 const privKey = account[AppConfig.PRIVATE_KEY];
-                const pku = '0x' + privateToPublic(toBuffer(privKey)).toString('hex');
+                const pku: any = '0x' + privateToPublic(toBuffer(privKey)).toString('hex');
                 // Get a public key
                 const subjectIdentity = new UserIdentity(web3, address, privKey.substring(2), 0);
                 const createTx = transactionFactory.identityManager.createAlastriaIdentity(web3, pku.substring(2));
