@@ -10,7 +10,13 @@
     <ion-row style="margin-left: 20px">
         <span style="font-size: 20px;">Tu AlastriaID</span>
     </ion-row>
-    <ion-searchbar placeholder="busca tus datos" class="normal-search" [(ngModel)]="searchTerm" (ionInput)="onSearch($event)"></ion-searchbar>
+    <ion-searchbar
+        placeholder="Busca tus credenciales"
+        class="normal-search"
+        animated
+        [(ngModel)]="searchTerm"
+        (ionInput)="onSearch($event)">
+    </ion-searchbar>
 
     <identity-data-list *ngIf="(credentials | async) as credentialList"
         isShowDetail=true

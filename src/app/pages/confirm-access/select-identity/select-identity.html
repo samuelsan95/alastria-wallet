@@ -7,7 +7,13 @@
     </ion-row>
     <ion-row class="ion-justify-content-center ion-align-items-center">
         <ion-col size="11">
-            <ion-searchbar  class="normal-search" [(ngModel)]="searchTerm" (ionInput)="onSearch($event)"></ion-searchbar>
+            <ion-searchbar
+                placeholder="Busca tú credencial"
+                class="normal-search"
+                animated
+                [(ngModel)]="searchTerm" 
+                ionInput)="onSearch($event)">
+            </ion-searchbar>
         </ion-col>
         <ion-col size="1" (click)="sortCredentials()">
             <img id="sort-icon" src="../../../assets/svg/sort.svg" />

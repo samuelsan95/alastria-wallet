@@ -20,7 +20,13 @@
                 </div>
             </ion-col>
         </ion-row>
-        <ion-searchbar class="normal-search" *ngIf="!selection" [(ngModel)]="searchTerm" (ionInput)="onSearch($event)"></ion-searchbar>
+        <ion-searchbar
+            placeholder="Busca tú actividad"
+            class="normal-search"
+            animated *ngIf="!selection"
+            [(ngModel)]="searchTerm"
+            (ionInput)="onSearch($event)">
+        </ion-searchbar>
     </div>
     <ion-segment (ionChange)="segmentChanged($event)" [value]="type">
         <ion-segment-button value="credentials">

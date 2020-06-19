@@ -6,7 +6,13 @@
       </p>
     </ion-title>
   </ion-toolbar>
-  <ion-searchbar class="normal-search" [(ngModel)]="searchTerm" (ionInput)="onSearch($event)"></ion-searchbar>
+  <ion-searchbar
+    placeholder="Busca una entidad"
+    class="normal-search"
+    animated
+    [(ngModel)]="searchTerm"
+    (ionInput)="onSearch($event)">
+  </ion-searchbar>
 </ion-header>
 
 <ion-content #pageContent fullscreen>
