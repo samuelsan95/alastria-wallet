@@ -91,7 +91,7 @@
 }
 
 #userInfoHeader.compact .innerOval {
-  height: 61px;
+  height: 71px;
   position: fixed;
   top:0;
   left: 0;
@@ -101,20 +101,19 @@
 }
 
 #userInfoHeader.compact .outerUserCircle {
-  width: 53px;
-  height: 53px;
+  width: 50px;
+  height: 50px;
   position: fixed;
-  top: 4px;
+  top: 18px;
   left: 8px;
   z-index: 9999;
-
 }
 
 #userInfoHeader.compact .innerUserCircle {
-  width: 43px;
-  height: 43px;
+  width: 40px;
+  height: 40px;
   position: fixed;
-  top: 9px;
+  top: 23px;
   left: 13px;
   z-index: 9999;
 }
@@ -139,7 +138,7 @@
 #userInfoHeader.compact .userSettings {
   position: fixed;
   right: 25px;
-  top: 10px;
+  top: 15px;
   z-index: 9999;
 
 }
