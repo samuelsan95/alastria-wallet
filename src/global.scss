@@ -204,6 +204,7 @@ ion-footer.modal-buttons {
 .header-title {
     height: 71px;
     padding-top: 0px;
+    background-color: white;
     ion-toolbar {
         height: 71px;
         width: 100%;
@@ -235,6 +236,16 @@ ion-footer.modal-buttons {
         }
     }
     background-color: black;
+}
+
+.header-span {
+    background-color: white;
+    width: 100%;
+    color: black;
+    h2, span {
+        margin-left: 20px;
+        font-size: 20px;
+    }
 }
 
 ion-back-button {

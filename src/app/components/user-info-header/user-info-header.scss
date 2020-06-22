@@ -1,6 +1,5 @@
 #userInfoHeader {
   height: 140px;
-  margin-bottom: 15px;
 }
 
 #userInfoHeader  .ios .nav-decor{
@@ -83,6 +82,7 @@
 
 #userInfoHeader.compact {
   height: 70px;
+  background-color: white;
 }
 
 #userInfoHeader.compact .outterOval {
