@@ -1,7 +1,5 @@
 /*  #Style Settings for Tab-1
 ===========================================*/
-[Index] { }
-
 ion-segment {
     margin-bottom: 3px;
 }
@@ -12,6 +10,12 @@ ion-segment-button > ion-label.label {
 
 ion-header {
     background-color: white;
+    color: black;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
 }
 
 #description {
