@@ -13,6 +13,11 @@
     padding: 5px;
 }
 
+.title-row {
+    margin-top: 24px;
+    margin-left: 20px;
+}
+
 .btnConfirm {
     --background: linear-gradient(90deg, #325B8E 0%, #00CAD6 100%);
     --border-radius: 30px;
@@ -31,4 +36,3 @@
 .button-inner {
     font-size: 17px;
 }
-

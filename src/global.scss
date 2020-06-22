@@ -205,14 +205,29 @@ ion-footer.modal-buttons {
     height: 61px;
     width: 100%;
     --background: linear-gradient(155.73deg, #325B8E 44.4%, #00B2BC 73.25%);
-    margin-bottom: 15px;
     color: white;
     display: flex;
     padding-top: 0px;
 }
 #header-title p {
     color: white;
-    font-size: 18px;
+    font-size: 17px;
+}
+
+
+.header-normal {
+    ion-toolbar {
+        height: 61px;
+        width: 100%;
+        display: flex;
+        padding-top: 0px;
+        p {
+            font-size: 17px;
+            color: black;
+            width: 100%;
+        }
+    }
+    background-color: black;
 }
 
 ion-back-button {
