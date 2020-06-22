@@ -1,4 +1,6 @@
 <ion-header>
+</ion-header>
+<ion-content class="tutorial-page">
     <ion-row id="logo-row">
         <img src="assets/images/logo/alastria-icon.png" id="alastria-logo">
     </ion-row>
@@ -12,8 +14,6 @@
                 dato/s</strong> para tu identidad</h2>
         </ion-row>
     </ng-template>
-</ion-header>
-<ion-content class="tutorial-page">
     <identity-data-list 
         *ngIf="credentials && credentials.length"
         isSelectable="true"
