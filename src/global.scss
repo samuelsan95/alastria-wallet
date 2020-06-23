@@ -206,7 +206,6 @@ ion-footer.modal-buttons {
     padding-top: 0px;
     background-color: white;
     ion-toolbar {
-        height: 71px;
         width: 100%;
         display: flex;
         padding-top: 0px;
@@ -252,3 +251,58 @@ ion-back-button {
     --color: white;
     display: block;
 }
+
+.md {
+    user-info-header {
+        #userInfoHeader.compact .innerOval {
+            height: 61px;
+        }
+        #userInfoHeader.compact .innerUserCircle {
+            top: 10px;
+        }
+        #userInfoHeader.compact .outerUserCircle {
+            top: 5px;
+        }
+        #userInfoHeader.compact .userSettings {
+            top: 10px;
+        }
+    }
+
+    expandable-list > div {
+        margin-top: 40px;
+    }
+
+    .header-title > ion-toolbar {
+        height: 61px;
+    }
+
+    #item-list-div {
+       margin-top: 40px;     
+    }
+} 
+  
+.ios { 
+    user-info-header {
+        #userInfoHeader.compact .innerOval {
+            height: 71px;
+        }
+        #userInfoHeader.compact .innerUserCircle {
+            top: 23px;
+        }
+        #userInfoHeader.compact .outerUserCircle {
+            top: 18px;
+        }        
+        #userInfoHeader.compact .userSettings {
+            top: 23px;
+        }
+    }
+
+    expandable-list > div {
+        margin-top: 20px;
+    }
+
+    .header-title > ion-toolbar {
+        height: 71px;
+    }
+}
+
