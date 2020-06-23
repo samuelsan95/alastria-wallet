@@ -45,7 +45,8 @@ export class EntitiesPage implements OnDestroy {
               private messageManagerService: MessageManagerService,
               private securedStrg: SecuredStorageService,
               private socketService: SocketService,
-              private deeplinks: Deeplinks) {
+              private deeplinks: Deeplinks,
+              private navController: NavController) {
     this.platform.backButton.subscribe(() => {
       this.navCtrl.back();
     });
