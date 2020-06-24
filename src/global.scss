@@ -172,9 +172,8 @@ ion-searchbar.normal-search  ion-icon {
 }
 
 ion-footer.modal-buttons {
-    position: absolute;
-    bottom: 50px;
-    
+    bottom: 20px;
+    background-color: white;
     ion-row {
       margin-top: 30px;
     }
@@ -191,6 +190,7 @@ ion-footer.modal-buttons {
     margin-top: 15px;
     font-weight: 500;
     margin: auto;
+    color: black;
 }
   
 .btnConfirm:before {
